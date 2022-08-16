@@ -2,6 +2,8 @@ namespace app_web_backend
 {
     public class Program
     {
+      
+      
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
@@ -18,7 +20,7 @@ namespace app_web_backend
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
+             
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -30,7 +32,14 @@ namespace app_web_backend
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
+          
             app.Run();
         }
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+        Host.CreateDefaultBuilder(args)
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder.UseStartup<Startup>();
+            });
     }
 }

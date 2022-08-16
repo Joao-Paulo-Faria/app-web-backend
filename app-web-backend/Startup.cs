@@ -1,11 +1,16 @@
 ﻿using app_web_backend.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
 namespace app_web_backend
 {
     public class Startup
     {
-        private readonly object edpoints;
+        //private readonly object edpoints;
 
         public Startup(IConfiguration configuration)
         {

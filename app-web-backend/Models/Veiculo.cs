@@ -14,9 +14,9 @@ namespace app_web_backend.Models
         public int Id { get; set; }
 
         [Required(ErrorMessage ="Obrigatório Informar o nome!")]
-        public string? Nome { get; set; }
+        public string Nome { get; set; }
 
         [Required(ErrorMessage = "Obrigatório Informar a placa!")]
-        public string? Placa { get; set; }
+        public string Placa { get; set; }
     }
 }
